@@ -2,6 +2,8 @@ import FriendList from '../FriendList/FriendList';
 import Profile from '../Profile/Profile';
 import userData from '../Profile/Profile.json';
 import friends from '../FriendList/FriendList.json';
+import TransactionHistory from '../TransactionHistory/TransactionHistory';
+import transactions from '../TransactionHistory/TransactionHistory.json';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </div>
   );
 }
