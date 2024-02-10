@@ -1,5 +1,7 @@
+import FriendList from '../FriendList/FriendList';
 import Profile from '../Profile/Profile';
 import userData from '../Profile/Profile.json';
+import friends from '../FriendList/FriendList.json';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         image={userData.avatar}
         stats={userData.stats}
       />
+      <FriendList friends={friends} />
     </div>
   );
 }
