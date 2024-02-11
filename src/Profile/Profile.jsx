@@ -1,9 +1,15 @@
 import css from '../Profile/Profile.module.css';
-function Profile({ image, username, tag, location, stats }) {
+function Profile({
+  image,
+  username = 'Anonymous',
+  tag = '@user tag',
+  location = 'unknown location',
+  stats = { followers: 0, views: 0, likes: 0 },
+}) {
   return (
     <div className={css.profile}>
       <div className={css.description}>
-        <img src={image} alt='"User avatar' className={css.avatar} />
+        <img src={image} alt="User avatar" className={css.avatar} />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>{tag}</p>
         <p className={css.location}>{location}</p>

@@ -4,20 +4,11 @@ import userData from '../Profile/Profile.json';
 import friends from '../FriendList/FriendList.json';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
 import transactions from '../TransactionHistory/TransactionHistory.json';
+import css from '../App/App.module.css';
 
 function App() {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
-    >
+    <div className={css.app}>
       <Profile
         username={userData.username}
         tag={userData.tag}

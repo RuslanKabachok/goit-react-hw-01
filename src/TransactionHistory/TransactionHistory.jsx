@@ -1,6 +1,9 @@
 import css from '../TransactionHistory/TransactionHistory.module.css';
 
-function TransactionHistory({ items }) {
+function TransactionHistory({ items = [] }) {
+  if (!items) {
+    return <p className={css.error}>No transactions available</p>;
+  }
   return (
     <table className={css.transactions}>
       <thead className={css.head}>
